@@ -1,20 +1,10 @@
 <?php
   class CoinCombination
   {
-    // function makeCombination($change) {
-    //   if(($change - 25) >= 0){
-    //     quarter += +1;
-    //   } elseif (($change - 10) >= 0){
-    //       dime += +1;
-    //     }  elseif (($change - 10) >= 0){
-    //         nickel += +1;
-    //       } elseif (($change - 10) >= 0){
-    //           penny+= +1;
-    //         }
-    // else {
-    //     return "enter change!"
-    //   }
-    // }
+    public $quarter = 0;
+    public $dime = 0;
+    public $nickel = 0;
+    public $penny = 0;
 
     function countChange($change)
     {
@@ -39,7 +29,12 @@
 
 
       }
-      return "" . $quarter . " " . $dime . " " . $nickel . " " . $penny;
+      $this->quarter = $quarter;
+      $this->dime = $dime;
+      $this->nickel = $nickel;
+      $this->penny = $penny;
+
+      return "Quarters:" . $quarter . " " . $dime . " " . $nickel . " " . $penny;
     }
   }
 ?>
